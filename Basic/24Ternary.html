@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // tanpa ternary
+        let nilai = 71
+        let ucapan
+        if (nilai >= 74){
+            ucapan = "Selamaat"
+        } else{
+            ucapan = "Goblok"
+        }
+
+        document.writeln(`<p> ${ucapan} </p>`)
+        
+
+        // dengan ternary
+        const Ucapan = nilai >= 75 ? "Selamat kamu lulus" : "Silahkan coba lagi"
+
+        document.writeln(`<p> ${Ucapan} </p>`)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
