@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let counter = 0 // global scope (bisa diakses darimana saja)
+        
+        function hitMe(){
+            counter++
+        }
+
+        hitMe()
+        hitMe()
+        console.info(counter)
+
+        function first(){
+            let firstVariable = 1 // local scope dari first
+            let nilai1 = firstVariable
+            nilai1++
+            document.writeln(`<p> ${nilai1} </p>`)
+        }
+
+        function second(){
+            let secondVariable = 2 // local scope dari second
+        }
+
+        first()
+        second()
+
+        console.info(firstVariable) // akan terjadi error, karena mencoba mengAkses local scope dari global scope
+        console.info(secondVariable) // akan terjadi error, karena mencoba mengAkses local scope dari global scope
+
+
+        // Namun, kasusnya akan berbeda dengan nested Function
+
+        function first(){
+        let satu = 0
+            function second(){
+                let dua = 1
+                document.writeln(satu) // kita masih bisa mengakses local scope function lain dengan nested
+            }
+            second()
+
+
+        }
+        satu()
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

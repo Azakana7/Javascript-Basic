@@ -20,6 +20,18 @@
 
         giveMeName(sayHello) // sayHello("Eko") <--- Wujud aseli
         giveMeName(say) // giveMeName(sayHello)  <--- Wujud aseli
+
+
+        // Anonymous Function atau function tanpa nama
+        let Bilang = function (nama){
+            console.info(`Hai ${nama}`)
+        }
+
+        Bilang("Blyat")
+
+        giveMeName(function (nama){
+            document.writeln(`Halo ${nama}`)
+        })
     </script>
 </head>
 <body>
