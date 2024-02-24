@@ -29,19 +29,20 @@
         first()
         second()
 
-        console.info(firstVariable) // akan terjadi error, karena mencoba mengAkses local scope dari global scope
-        console.info(secondVariable) // akan terjadi error, karena mencoba mengAkses local scope dari global scope
 
 
         // Namun, kasusnya akan berbeda dengan nested Function
 
-        function first(){
-        let satu = 0
-            function second(){
-                let dua = 1
+        function satu(){
+        let satu 
+        satu = "First"
+
+            function dua(){
+                let dua 
+                dua = "First nested"
                 document.writeln(satu) // kita masih bisa mengakses local scope function lain dengan nested
             }
-            second()
+            dua()
 
 
         }
