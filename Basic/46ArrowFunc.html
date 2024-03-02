@@ -17,6 +17,28 @@
 
         sayHello("Divo", ...[1,2,3,4,5,6,7,8,8,9]) // bisa menggunakan spread
 
+        //mengembalikan nilai
+
+        const sum = (first, second) => first + second
+
+        console.info(sum(10, 20))
+        // seperti ini bisa dan tidak perlu seperti:
+
+        const tambah = (a, b) => {
+            return a + b
+        }
+
+        document.writeln(tambah(50, 50))
+
+        // boleh namun agak ribet wirr
+        // arrow function juga boleh tidak memakai () jika hanya 1 param, tapi kalau kosong tetap gunakan ()
+
+        const arrow = panah => {
+            console.info(panah)
+        }
+
+        arrow(...[1,2,3,44,5])
+
     </script>
 </head>
 <body>
