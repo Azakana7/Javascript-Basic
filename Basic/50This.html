@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(this) // merupakan cara untuk mengecek kepemilikan
+
+        function sample(){
+            console.info(this)
+            function inner(){
+                console.info(this)
+            }
+            inner()
+        }
+
+        sample()
+
+        const person = {
+            Nama: "Divo daniel saputra",
+            sayHello: function(Nama){
+                console.log(`Hi ${Nama}, my name is ${this.Nama}`)
+            }
+        }
+
+        person.sayHello("Yahudi")
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
