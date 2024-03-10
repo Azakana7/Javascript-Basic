@@ -7,13 +7,18 @@
     <script>
         const object = {
             Nama: "Divo",
-            sayHello:  (Name) => {
-                console.info(`Hai ${Name}`)
+            sayHello: (Name) => { // tanpa FUNCTION
+                    document.writeln(`<h1>Hai ${Name}</h1>`)
             }
         }
 
-        object.sayHello(prompt("InputName: "))
+        object.sayHello(prompt("Masukkan nama anda:"))
     </script>
+    <style>
+        body {
+            background-color: rgb(28, 195, 28);
+        }
+    </style>
 </head>
 <body>
     
