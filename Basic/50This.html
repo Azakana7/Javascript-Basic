@@ -17,14 +17,26 @@
 
         sample()
 
-        const person = {
-            Nama: "Divo",
-            sayHello: function(value){
-                document.writeln(`Halo ${value} My name is ${this.Nama}`)
+        // const person = {
+        //     Nama: "Divo",
+        //     sayHello: function(value){
+        //         document.writeln(`Halo ${value} My name is ${this.Nama}`)
+        //     }
+        // }
+
+        // person.sayHello("Akbar")
+
+        const say = function (Nilai = '')  {
+            let objek = {
+                Name: "Joko",
+                noTrust: function(){
+                    document.writeln(`Hai ${Nilai} nama saya ${this.Name}`)
+                }
             }
+            objek.noTrust()
         }
 
-        person.sayHello("Rahmat")
+        say(prompt("Who"))
 
 
     </script>
