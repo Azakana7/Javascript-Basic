@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function useStrict() {
-            `use strict`
+        function useStrictMode() {
+            // 'use strict' <--- apabila dinyalakan akan melarang beberapa fungsi tertentu di JavaScript
+            const person = {
+                firstName: "Divo"
+            }
+            with (person) { //akan error karena with dilarang dalam strict mode mazsehhh
+                console.info(firstName)
+            }
         }
+
+        useStrictMode()
     </script>
 </head>
 <body>
